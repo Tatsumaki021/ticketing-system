@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticketing System - Write Ticket</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Gtv0G2o7194gVv60HkRh8HT0W9z1cWObcN6XCMlc7FvMmmtuZhH6Q4L/lqFvJzm4"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/write.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">Ticketing System</div>
+      <nav class="nav">
+        <a href="dashboard.html" class="nav__link">Dashboard</a>
+        <a href="write.html" class="nav__link nav__link--active">Write</a>
+        <a href="account.html" class="nav__link">Account</a>
+        <a href="login.html" class="nav__link nav__link--cta">Login / Signup</a>
+      </nav>
+    </header>
+
+    <main class="page page--write">
+      <section class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h1 class="h3">Create a New Ticket</h1>
+                <p class="text-muted">
+                  Use this form to submit a new ticket to the system.
+                </p>
+
+                <form class="ticket-form" action="#" method="post">
+                  <div class="mb-3">
+                    <label class="form-label">Title</label>
+                    <input
+                      type="text"
+                      name="title"
+                      class="form-control"
+                      placeholder="Summarize the issue"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <textarea
+                      name="description"
+                      class="form-control"
+                      rows="6"
+                      placeholder="Describe the problem in detail"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label class="form-label">Priority</label>
+                      <select name="priority" class="form-select">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label">Category</label>
+                      <select name="category" class="form-select">
+                        <option value="bug" selected>Bug</option>
+                        <option value="feature">Feature request</option>
+                        <option value="support">Support</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="mb-3 mt-3">
+                    <label class="form-label">Attachments (optional)</label>
+                    <input
+                      type="file"
+                      name="attachments"
+                      class="form-control"
+                      multiple
+                    />
+                  </div>
+
+                  <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">
+                      Submit Ticket
+                    </button>
+                    <a href="dashboard.html" class="btn btn-outline-secondary"
+                      >Back to Dashboard</a
+                    >
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Ticketing System</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/write.js" defer></script>
+  </body>
+</html>
